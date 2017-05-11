@@ -1,4 +1,17 @@
+<head>
+<style>
+div{
+  color:blue;
+  
+}
 
+#error_explanation{
+  color:red;
+}
+
+
+</style>
+</head>
 <%= form_for @article do |f| %>
  
   <% if @article.errors.any? %>
@@ -14,8 +27,8 @@
       </ul>
     </div>
   <% end %>
- 
-  <p>
+ <div>
+  <p >
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
@@ -28,5 +41,5 @@
   <p>
     <%= f.submit %>
   </p>
- 
+ </div>
 <% end %>
